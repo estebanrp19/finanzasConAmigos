@@ -28,7 +28,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-12 md:py-0 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-12 md:py-0 bg-gradient-to-br from-slate-50 to-slate-100 ">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           {/* Left side - Text */}
           <div className="space-y-6">
@@ -45,13 +45,13 @@ export default function HeroSection() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-border">
+              <div className="bg-white p-4 rounded-lg border border-border">
                 <div className="text-2xl font-bold text-purple-600">100+</div>
                 <div className="text-sm text-muted-foreground">
                   Grupos activos
                 </div>
               </div>
-              <div className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-border">
+              <div className="bg-white  p-4 rounded-lg border border-border">
                 <div className="text-2xl font-bold text-pink-600">2.5k+</div>
                 <div className="text-sm text-muted-foreground">Usuarios</div>
               </div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
 
           {/* Right side - Savings Tracker */}
           <div className="flex justify-center">
-            <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg border border-border w-full max-w-md">
+            <div className="bg-white  p-6 rounded-2xl shadow-lg border border-border w-full max-w-md">
               <h3 className="text-lg font-bold mb-4">Registra tu ahorro</h3>
 
               <div className="flex gap-2 mb-4">
@@ -88,11 +88,11 @@ export default function HeroSection() {
               </div>
 
               {/* Total savings */}
-              <div className="mb-4 p-3 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900 rounded-lg">
+              <div className="mb-4 p-3 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg">
                 <div className="text-sm text-muted-foreground">
                   Total ahorrado
                 </div>
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">
+                <div className="text-3xl font-bold text-purple-600 ">
                   ${totalSavings.toFixed(2)}
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function HeroSection() {
                   savings.map((value, index) => (
                     <div
                       key={index}
-                      className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-700 rounded-lg animate-in"
+                      className="flex items-center justify-between p-3 bg-slate-50 rounded-lg animate-in"
                     >
                       <div>
                         <div className="font-semibold">${value.toFixed(2)}</div>
@@ -134,7 +134,7 @@ export default function HeroSection() {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-slate-800 rounded-lg p-6 max-w-md w-full animate-in">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full animate-in">
             <h2 className="text-2xl font-bold mb-4">Crear nuevo grupo</h2>
             <input
               type="text"
@@ -156,7 +156,7 @@ export default function HeroSection() {
             <div className="flex gap-3">
               <button
                 onClick={() => setShowModal(false)}
-                className="flex-1 px-4 py-2 border border-border rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition"
+                className="flex-1 px-4 py-2 border border-border rounded-lg hover:bg-slate-50 transition"
               >
                 Cancelar
               </button>

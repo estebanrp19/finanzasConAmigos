@@ -44,7 +44,7 @@ export default function Features() {
   return (
     <section
       id="caracteristicas"
-      className="py-16 md:py-24 px-4 bg-slate-50 dark:bg-slate-950"
+      className="py-16 md:py-24 px-4 bg-slate-50"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -58,8 +58,8 @@ export default function Features() {
               onClick={() => setSelectedFeature(index)}
               className={`p-6 rounded-lg border-2 transition cursor-pointer ${
                 selectedFeature === index
-                  ? "border-purple-500 bg-white dark:bg-slate-800"
-                  : "border-border bg-white dark:bg-slate-800 hover:border-purple-300"
+                  ? "border-purple-500 bg-white"
+                  : "border-border bg-white hover:border-purple-300"
               }`}
             >
               <div className="text-5xl mb-3">{feature.icon}</div>
@@ -72,7 +72,7 @@ export default function Features() {
         </div>
 
         {/* Detailed view of selected feature */}
-        <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-border">
+        <div className="bg-white rounded-lg p-8 border border-border">
           <h3 className="text-2xl font-bold mb-6">
             {features[selectedFeature].title}
           </h3>
@@ -90,7 +90,7 @@ export default function Features() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-950 dark:to-pink-950 rounded-lg p-8 flex items-center justify-center min-h-64">
+            <div className="bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg p-8 flex items-center justify-center min-h-64">
               <div className="text-7xl">{features[selectedFeature].icon}</div>
             </div>
           </div>

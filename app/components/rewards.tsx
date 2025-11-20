@@ -51,7 +51,7 @@ export default function Rewards() {
   return (
     <section
       id="premios"
-      className="py-16 md:py-24 px-4 bg-white dark:bg-slate-900"
+      className="py-16 md:py-24 px-4 bg-white"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -70,7 +70,7 @@ export default function Rewards() {
               className={`rounded-lg p-6 border-2 transition cursor-pointer transform hover:scale-105 ${
                 unlockedRewards.includes(reward.id)
                   ? `bg-gradient-to-br ${reward.color} text-white border-transparent`
-                  : "border-border bg-slate-50 dark:bg-slate-800"
+                  : "border-border bg-slate-50"
               }`}
             >
               <div className="text-5xl mb-3 text-center">{reward.icon}</div>
